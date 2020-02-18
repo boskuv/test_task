@@ -33,7 +33,7 @@ SECRET_KEY = '7kxdh2!@x1aiim17^asux0b0uzxh_g!3rlfn_p)(giv#%$2vef'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['boskuv.pythonanywhere.com']
 
 
 # Application definition
