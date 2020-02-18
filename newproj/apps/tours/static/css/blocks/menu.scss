@@ -1,0 +1,119 @@
+.menu{
+    .wrapper{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        max-width: 1860px;
+    }
+    &-social{
+        margin: 0 -15px;
+        display: flex;
+        a{
+            display: block;
+            width: 30px;
+            margin: 0 15px;
+            img{
+                width: 100%;
+            }
+        }
+        @media screen {
+            @media (max-width: 875px){
+                margin: 0 -10px;
+                a{
+                    margin: 0 10px;
+                }
+            }
+            @media (max-width: 875px){
+                margin: 0 -5px;
+                a{
+                    margin: 0 5px;
+                }
+            }
+            @media (max-width: 520px){
+                a{
+                    width: 25px;
+                }
+            }
+            @media (max-width: 440px){
+               order: 2;
+            }
+        }
+    }
+}
+
+.nav{
+    padding: 20px 0;
+    @media screen {
+        @media (max-width: 520px){
+            padding: 20px 0;
+        }
+        @media (max-width: 440px){
+            display: none;
+        }
+        @media (max-width: 440px){
+            order: 3;
+            width: 100%;
+            padding: 0 0 20px 0;
+        } 
+    }
+    ul{
+        display: flex;
+        margin: 0 -25px;
+
+        li{
+            margin: 0 25px;
+        }
+
+        @media screen {
+            @media (max-width: 875px){
+                margin: 0 -10px;
+
+                li{
+                    margin: 0 10px;
+                }
+            }
+            @media (max-width: 520px){
+                margin: 0 -5px;
+
+                li{
+                    margin: 0 5px;
+                }
+            }
+        }
+    }
+
+    a{
+        font-size: 20px;
+        font-weight: 300;
+        letter-spacing: 0.48px;
+        &:hover{
+            text-decoration: none;
+        }
+        @media screen {
+            @media (max-width: 1460px) {
+                font-size: 18px;
+            }
+            @media (max-width: 520px){
+                font-size: 14px;
+            }
+        }
+    }
+}
+
+.menu-icon{
+    display: none;
+    width: 20px;
+    cursor: pointer;
+    img{
+        width: 100%;
+    }
+
+    @media screen {
+        @media (max-width: 440px){
+            display: block;
+            margin: 20px 0;
+            order: 1;
+        }        
+    }
+}

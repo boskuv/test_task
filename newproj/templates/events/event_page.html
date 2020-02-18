@@ -1,0 +1,96 @@
+{% extends 'base.html' %}
+
+{% block title %} Список мероприятий {% endblock %}
+
+{% block content %}
+{% load static %}
+<div class="page-content inner-category">
+            <div class="wrapper">
+                
+<section class="sidebar">
+</section>
+    <div class="page-content-items">
+	{% for ev in latest %}	
+	<a class="page-content__item" href="/events/{{ ev.pk }}/">
+    {% if ev.cover %}
+	<div class="content-item__img content-item__img-js">
+    <img src="{{ MEDIA_URL }}{{ ev.cover.url }}">  
+    </div>
+	{% endif %}
+	<div class="content-item__title">
+    <span class="date">{{ ev.pub_date|date:"d.m.Y"}}</span>
+    <span class="content-item__title-js" style="height: 27px;">{{ev.title}}</span>
+	</div>
+    </a>
+	{% endfor %}
+	</div>
+    </div>
+ </div>
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <div class="page-content-items">
+                 <h1>Ближайшие мероприятия</h1>
+                    
+                        
+                            <a class="page-content__item" href="/blizhajshie-meropriyatiya/provody-maslenicy-v-carstve-berendeya/">
+                                <div class="content-item__img content-item__img-js">
+                                    
+                                        
+                                        
+                                            <img src="/media/thumbs/covers/sections/6.jpg.500x0_q85_crop-smart_detail.jpg" alt="Проводы Масленицы в царстве Берендея" title="Проводы Масленицы в царстве Берендея">
+                                        
+                                    
+                                </div>
+
+                                <div class="content-item__title">
+                                    <span class="date">01.03.2020</span>
+                                    <span class="content-item__title-js" style="height: 27px;">Проводы Масленицы в ...</span>
+                                    
+
+                                </div>
+                            
+                            </a>
+                        
+                            <a class="page-content__item" href="/blizhajshie-meropriyatiya/vstrechaj-vesnu-v-izborske-russkaya-maslenica/">
+                                <div class="content-item__img content-item__img-js">
+                                    
+                                        
+                                        
+                                            <img src="/media/thumbs/covers/sections/mas-1_xiR6B0d.jpg.500x0_q85_crop-smart_detail.jpg" alt="Встречай весну в Изборске: русская масленица" title="Встречай весну в Изборске: русская масленица">
+                                        
+                                    
+                                </div>
+
+                                <div class="content-item__title">
+                                    <span class="date">01.03.2020</span>
+                                    <span class="content-item__title-js" style="height: 27px;">Встречай весну в Изб...</span>
+                                    
+
+                                </div>
+                            
+                            </a>
+                        
+                    
+                </div>
+            </div>
+        </div>
+    </div>

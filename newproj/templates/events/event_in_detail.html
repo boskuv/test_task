@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block title %} {{current_event.title}} {% endblock %}
+
+{% block content %}
+<div class="article-content">
+            <div class="wrapper">
+    
+                <div class="content content-article-two">
+                    <div class="content-header">
+                        <h1 align="center">{{current_event.title}}</h1>
+                    </div>
+                    <div class="schedule">
+                        <div class="schedule__item">
+                            <div class="info">
+                                <p style="margin: 0px; line-height: 0.7;">&nbsp;</p>
+<p>{{current_event.subtitle|safe|escape}}
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                
+            </div>
+        </div>
+{% endblock %}

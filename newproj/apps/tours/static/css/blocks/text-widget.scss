@@ -1,0 +1,42 @@
+.text-widget{
+    background-color: #FFFFFF;
+    box-shadow: 0px 0px 13px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    padding: 20px;
+    h3{
+        font-style: normal;
+        font-weight: normal;
+        line-height: normal;
+        color: #128A4E;
+        font-size: 24px;
+        padding-bottom: 15px;
+        @media screen {
+            @media (max-width: 1460px) {
+                font-size: 20px;
+            }
+            @media (max-width: 1200px) {
+                font-size: 18px;
+            }
+        }
+    }
+    a{
+        display: block;
+        font-style: normal;
+        font-weight: 550;
+        line-height: 18px;
+        font-size: 20px;
+        color: #000000;
+        margin-bottom: 10px;
+        &:hover{
+            color: rgb(40, 56, 48);        
+        }
+        @media screen {
+            @media (max-width: 1460px) {
+                font-size: 16px;
+            }
+            @media (max-width: 1200px) {
+                font-size: 14px;
+            }
+        }
+    }
+}

@@ -1,0 +1,136 @@
+{% extends 'base.html' %}
+
+{% block title %} Главная страница {% endblock %}
+
+{% block content %}
+{% load static %}
+<section class="presentation">
+        <div class="wrapper">
+          <div class="presentation-content">
+            <div class="presentation-item">
+              <a class="presentation-dropdown" href="/tours/">Открой свой псков</a>
+            </div>
+            <div class="presentation-item">
+              <a class="presentation-dropdown" href="/tours/">Детский образовательный туризм</a>
+            </div>
+            <div class="presentation-item">
+              <a class="presentation-dropdown" href="/tours/">Весь мир для Вас</a>
+            </div>
+          </div>
+        </div>
+      </section>
+	  
+	  <section class="info-list">
+        <div class="wrapper">
+          <div class="header-block">
+            <h1>Туроператор Славянский Тур</h1>
+          </div>
+          <ul class="list">
+            <li class="list__item">ООО «Славянский тур» один из ведущих туроператоров Псковской области по внутреннему и международному въездному туризму </li>
+            <li class="list__item">Более 25 лет успешной работы на российском и международном рынке туристских услуг</li>
+            <li class="list__item">Создатель регионального экскурсионно-образовательного проекта «Псковские уроки», включенного в федеральную программу «Живые уроки»</li>
+            <li class="list__item">Член Межрегионального координационного совета и Экспертного совета федеральной программы «Живые уроки»</li>
+            <li class="list__item">Член Российского Союза Туриндустрии, Торгово-Промышленной Палаты Псковской области, Псковского областного союза туриндустрии</li>
+            <!-- <li class="list__item">Член объединения ведущих туроператоров Псковской области «Балтийский клуб»</li>
+            <li class="list__item">Постоянный участник международных, российских и региональных туристических выставок</li>
+            <li class="list__item">Единственный официальный представитель Сети Магазинов Горящих Путевок в г.Пскове</li>
+            <li class="list__item">Разработчик разноуровневых маршрутов по ключевым ганзейским городам в рамках празднования 39 Международных Ганзейских дней Нового времени в Пскове (XXXIX International Hanseatic Days 2019)</li>
+            <li class="list__item">ООО «Славянский тур» является участником федеральных проектов «Серебряное ожерелье России», «Русские усадьбы»</li>
+            <li class="list__item">Организация MICE мероприятий</li>
+            <li class="list__item">Спонсор многих городских и областных мероприятий, активный участник международных программ</li> -->
+          </ul>
+          <a class="btn-white btn-list" href="/about/">
+            <span>Читать полностью</span>
+            <img src="{% static "images/vector/arrow.png" %}" alt="">
+          </a>
+        </div>
+      </section>
+	  
+	  <section class="project">
+        <div class="wrapper">
+          <div class="header-block">
+            <h2>Туры по проектам</h2>
+          </div>
+          <div class="project-block">
+            <div class="project-block__item">
+              <div class="project-img">
+                <img src="{% static "images/project-item-1.png" %}" alt="">
+                <img class="project-img-top" src="{% static "images/project-item-top-1.png" %}" alt="">
+              </div>
+              <div class="project-info">
+                <h3>серебряное ожерелье россии</h3>
+                <p>«Серебряное ожерелье России» объединяет 11 субъектов, входящих в состав Северо-Западного федерального округа Российской Федерации, в том числе и Псковскую область.</p>
+                <a href="/tours/{{group_by_tours.3.slug}}" class="btn-white">
+                  <span>Узнать больше</span>
+                  <img src="{% static "images/vector/arrow.png" %}" alt="">
+                </a>
+              </div>
+
+            </div>
+            <div class="project-block__item">
+              <div class="project-img">
+                <img src="{% static "images/project-item-2.png" %}" alt="">
+                <img class="project-img-top" src="{% static "images/project-item-top-2.png" %}" alt="">
+              </div>
+              <div class="project-info">
+                <h3>федеральная программа «живые уроки»</h3>
+                <p>В настоящее время детский туризм стремительно набирает обороты. Этому способствовало, прежде всего, создание Координационного совета по развитию детского туризма...</p>
+                <a href="/tours/{{group_by_tours.4.slug}}" class="btn-white">
+                  <span>Узнать больше</span>
+                  <img src="{% static "images/vector/arrow.png" %}" alt="">
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+	  
+	  <section class="activity-header">
+        <div class="wrapper">
+          <div class="header-block">
+            <h2>Ближайшие мероприятия</h2>
+            <a href="/events/">Смотреть все мероприятия</a>
+          </div>
+        </div>
+      </section>
+	  
+	  <section class="activity">
+        <div class="wrapper">
+          <div class="activity-container">	
+	<a class="page-content__item" href="/events/{{ latest.0.pk }}/">
+    {% if latest.0.cover %}
+	<div class="content-item__img content-item__img-js">
+    <img src="{{ MEDIA_URL }}{{ latest.0.cover.url }}">  
+    </div>
+	{% endif %}
+	<div class="content-item__title">
+    <span class="date">{{ latest.0.pub_date|date:"d.m.Y"}}</span>
+    <span class="content-item__title-js" style="height: 27px;">{{latest.0.title}}</span>
+	</div>
+    </a>
+		<a class="page-content__item" href="/events/{{ latest.1.pk }}/">
+    {% if latest.1.cover %}
+	<div class="content-item__img content-item__img-js">
+    <img src="{{ MEDIA_URL }}{{ latest.1.cover.url }}">  
+    </div>
+	{% endif %}
+	<div class="content-item__title">
+    <span class="date">{{ latest.1.pub_date|date:"d.m.Y"}}</span>
+    <span class="content-item__title-js" style="height: 27px;">{{latest.1.title}}</span>
+	</div>
+    </a>
+		<a class="page-content__item" href="/events/{{ latest.2.pk }}/">
+    {% if latest.2.cover %}
+	<div class="content-item__img content-item__img-js">
+    <img src="{{ MEDIA_URL }}{{ latest.2.cover.url }}">  
+    </div>
+	{% endif %}
+	<div class="content-item__title">
+    <span class="date">{{ latest.2.pub_date|date:"d.m.Y"}}</span>
+    <span class="content-item__title-js" style="height: 27px;">{{latest.2.title}}</span>
+	</div>
+    </a>
+          </div>
+        </div>
+      </section>
+{% endblock %}

@@ -1,0 +1,266 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: $font-size--root;
+  font-family: sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+html,
+body {
+  // width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+body {
+  //color: $base-color;
+
+  font: {
+    size: $font-size;
+    //weight: $font-weight;
+    //family: $font-family;
+  }
+
+  line-height: $line-height;
+
+}
+
+a {
+  color: $link-color;
+  text-decoration: none;
+  background-color: transparent;
+  outline: none;
+  -webkit-text-decoration-skip: objects;
+
+  &[href^="tel"] {
+    text-decoration: none;
+
+    &:hover { text-decoration: none; }
+  }
+
+  &:hover {
+    color: $link-color--hover;
+  }
+
+  &:active { color: $link-color--active; }
+}
+
+ol,
+ul { list-style: none; }
+
+b,
+strong { font-weight: $font-weight--bold; }
+
+i,
+em { font-style: italic; }
+
+s,
+strike { text-decoration: line-through; }
+
+dfn { font-style: italic; }
+
+hr {
+  margin: 10px 0;
+  padding: 0;
+  height: 0;
+  border: {
+    color: $gray;
+    style: solid;
+    width: 1px 0 0 0;
+  }
+  box-sizing: content-box;
+}
+
+blockquote,
+q {
+  margin: 0;
+  quotes: none;
+
+  &:before, &:after {
+    content: '';
+    content: none;
+  }
+}
+
+sub,
+sup {
+  font-size: $font-size--small;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sup { top: -0.5em; }
+
+sub { bottom: -0.25em; }
+
+mark {
+  color: #000;
+  background: #ff0;
+}
+
+svg:not(:root) { overflow: hidden; }
+
+audio,
+canvas,
+progress,
+video {
+  display: inline-block;
+  vertical-align: baseline;
+}
+
+audio:not([controls]) {
+  height: 0;
+  display: none;
+}
+
+img { border: 0; }
+
+figure { margin: 0; }
+
+pre { overflow: auto; }
+
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace;
+}
+
+table {
+  border: {
+    spacing: 0;
+    collapse: collapse;
+  }
+}
+
+td,
+th { padding: 0; }
+
+input,
+textarea,
+button,
+select,
+optgroup {
+  margin: 0;
+  padding: 0;
+  outline: none;
+
+  color: $base-color;
+
+  font: {
+    size: $font-size;
+    //weight: $font-weight;
+    //family: $font-family;
+  }
+
+  line-height: $line-height;
+  border-radius: 0;
+}
+
+fieldset {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+textarea { overflow: auto; }
+
+optgroup { font-weight: bold; }
+
+legend {
+  border: 0;
+  padding: 0;
+}
+
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  cursor: pointer;
+  -webkit-appearance: button;
+}
+
+button[disabled],
+html input[disabled] {
+  cursor: default;
+}
+
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+input { line-height: normal; }
+
+input[type="checkbox"],
+input[type="radio"] {
+  padding: 0;
+  box-sizing: border-box;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+[type="search"] {
+  box-sizing: content-box;
+  outline-offset: -2px;
+  -webkit-appearance: textfield;
+}
+
+[type="search"]::-webkit-search-cancel-button,
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  font: inherit;
+}

@@ -1,0 +1,98 @@
+{% extends 'base.html' %}
+
+{% block title %} {{current_tour.title}} {% endblock %}
+{% block style %} 
+.img-block{
+display:block;
+margin:auto;
+}
+{% endblock %}
+{% block content %}
+<div class="article-content">
+            <div class="wrapper">
+                
+
+
+                <div class="content">
+
+                    <div class="content-header">
+                        <h1>{{current_tour.name}}</h1>
+                    </div>
+
+                    <div class="content-main"> 
+                        
+                        <div class="img-block">
+						{% if current_tour.cover %}
+                            <img src="{{ MEDIA_URL }}{{ current_tour.cover.url }}" alt="{{current_tour.title}} width="726" height="483">
+        
+						{% endif %}
+						</div>
+                        
+                            <div>
+                                <p style="margin: 0px; line-height: 0.7;">&nbsp;</p>
+
+<h1 align="left"> {{current_tour.info|safe|escape}} </h1>
+
+
+<p style="text-align: justify;">&nbsp;</p>
+                            </div>
+                        
+
+                    </div>
+
+                    
+                    
+
+                </div>
+                
+
+
+                <div class="sidebar-right" itemscope="" itemtype="http://schema.org/Event">
+                    <div itemprop="name" hidden="">{{current_tour.title}}</div>
+                    
+                        <ul class="towns sidebar-right-top">
+                            <li><span>{{current_tour.subtitle}}</span></li>
+                        </ul>
+                    
+
+
+
+
+
+
+
+
+
+
+
+                    <div class="orders" itemprop="offers" itemscope="" itemtype="http://schema.org/Offer">
+                        
+                            <span itemprop="price" content="
+                                        от 5500
+                                        руб">
+                                            {{current_tour.cost}}</span>
+                        
+                       </div>
+                    <div class="calendar">
+                        
+                            <span class="calendar-header">
+                                Продолжительность:</span>
+                            <span class="calendar-date">{{current_tour.duration}}</span>
+                        
+
+                         <div class="calendar-header-container">
+                             
+                         </div>
+                    </div>
+
+                    <div class="orders">
+                        <a class="btn-white popup-with-form" onclick="setTour('Открой свой Псков', 'null', 'null', '')" href="#order-catalog">
+                            <span>Заказать</span>
+                        </a>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+{% endblock %}

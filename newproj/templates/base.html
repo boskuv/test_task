@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta content="telephone=no" name="format-detection">
+  <meta name="HandheldFriendly" content="true">
+
+  <title>{% block title %} Главная {% endblock %}</title>
+  <style>{% block style %} {% endblock %}</style>
+  <meta name="description" content="Site description">
+  <meta name="keywords" content="Site keywords">
+
+  <link href="//fonts.googleapis.com/css?family=Roboto:400,400i,700,700i&amp;subset=cyrillic" rel="stylesheet">
+  <link href="{% static "css/styles.min.css" %}" rel="stylesheet">
+  <link href="{% static "css/plugins.min.css" %}" rel="stylesheet">
+
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="http://sitename.com/">
+  <meta property="og:title" content="Site title">
+  <meta property="og:description" content="Site description">
+  <meta property="og:image" content="http://sitename.com/images/og-image.jpg">
+  <meta property="og:image:width" content="600">
+  <meta property="og:image:height" content="600">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+  <link rel="manifest" href="/favicon/site.webmanifest">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="theme-color" content="#ffffff">
+
+  <!--[if lt IE 9 ]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+</head>
+<body>
+  <div class="container">
+    <div class="content">
+      <header class="header">
+        <div class="wrapper">
+
+          <div class="header-logo">
+            <a href="/">
+              <p>туроператор с 1993 года</p>
+              <img src="{% static "images/logo.png" %}" alt="">
+            </a>
+          </div>
+
+          <div class="header-contacts">
+
+            <div class="main-office">
+              <span class="office-title">офис в ТРК "Акваполис", 1 эт.</span>
+              <p class="office-adress">туры из Пскова</p>
+              <a class="office-number" href="tel:+78112700700">+7 (8112) 700-700</a>
+              <a class="office-number" href="tel:+79643163573">+7 (964) 316-3573</a>
+              <a class="office-mail" href="mailto:mgp-pskov@yandex.ru">mgp-pskov@yandex.ru</a>
+              <div class="office-work">
+                <p><span>Ежедневно: </span>10.00 - 21.00</p>
+              </div>
+            </div>
+
+            <div class="main-office">
+              <span class="office-title">главный офис</span>
+              <p class="office-adress">ул. Петровская, 31</p>
+              <a class="office-number" href="tel:+78112793097">+7 (8112) 79-30-97</a>
+              <div class="office-work">
+                <p><span>Пн - Пт: </span>10.00 - 19.00</p>
+                <p><span>Сб: </span>11.00 - 16.00</p>
+                <p><span>Вс: выходной</span></p>
+              </div>
+            </div>
+
+            <div class="main-office main-office-inline">
+              <div class="main-office-top">
+                <p class="office-adress">туры из Пскова</p>
+                <a class="office-number" href="tel:+78112793097">+7 (960) 225-52-25</a>
+                <a class="office-mail" href="mailto:mgp-pskov@yandex.ru">mgp-pskov@yandex.ru</a>
+              </div>
+              <div class="main-office-bottom">
+                <p class="office-adress">туры по Пскову</p>
+                <a class="office-number" href="tel:+79113573535">+7 (911) 357-35-35</a>
+                <a class="office-mail" href="mailto:priempskov@yandex.ru">priempskov@yandex.ru</a>
+              </div>
+            </div>
+
+            <div class="order">
+              <div class="order-phone">
+                <a href="#">Заказать звонок</a>
+              </div>
+              <div class="order-tour">
+                <a href="#">Заказать тур</a>
+              </div>
+              <div class="order-contacts">
+                <a>Наши контакты</a>
+              </div>
+            </div>
+
+          </div>
+      </div></header>
+
+      <section class="menu">
+        <div class="wrapper">
+
+          <div class="menu-icon">
+            <img src="{% static "images/icon/menu-icon.png" %}" alt="">
+          </div>
+
+          <nav class="nav">
+            <ul>
+              <li><a href="#">О нас</a></li>
+              <li><a href="#">Контакты</a></li>
+              <li><a href="#">Новости</a></li>
+              <li><a href="#">Отзывы</a></li>
+            </ul>
+          </nav>
+
+          <div class="menu-social">
+            <a href="#"><img src="{% static "images/icon/whatsapp.png" %}" alt=""></a>
+            <a href="#"><img src="{% static "images/icon/vk.png" %}" alt=""></a>
+            <a href="#"><img src="{% static "images/icon/instagram.png" %}" alt=""></a>
+          </div>
+        </div>
+      </section>
+    </div>
+    {% block content %}{% endblock %}
+    <footer class="footer">
+      <div class="footer-top">
+        <div class="wrapper">
+          <div class="left-col">
+            <div class="logo">
+              <a href="">
+                <p>туроператор с 1993 года</p>
+                <img src="{% static "images/logo-white.png" %}" alt="">
+              </a>
+            </div>
+            <div class="projects">
+              <a href=""><span>Псковские уроки</span> <img src="{% static "images/vector/white-arrow.png" %}" alt=""></a>
+              <a href=""><span>Живые уроки</span> <img src="{% static "images/vector/white-arrow.png" %}" alt=""></a>
+              <a href=""><span>Серебряное ожерелье</span> <img src="{% static "images/vector/white-arrow.png" %}" alt=""></a>
+            </div>
+            <div class="menu-social">
+              <a href="#"><img src="{% static "images/icon/vk-footer.png" %}" alt=""></a>
+              <a href="#"><img src="{% static "images/icon/instagram-footer.png" %}" alt=""></a>
+              <a href="#"><img src="{% static "images/icon/whatsapp-footer.png" %}" alt=""></a>
+            </div>
+          </div>
+          <div class="right-col">
+            <div class="info">
+              <div class="info-item">
+                <a class="info-item-header" href="">Открой свой псков</a>
+                <ul class="list">
+                  <li><a href="">Групповые туры</a></li>
+                  <li><a href="">Сборные туры</a></li>
+                  <li><a href="">Экскурсии</a></li>
+                  <li><a href="">Индивидуальные туры</a></li>
+                  <li><a href="">Событийные туры</a></li>
+                  <li><a href="">Incoming</a></li>
+                  <li><a href="">MICE (деловой туризм)</a></li>
+                </ul>
+              </div>
+              <div class="info-item">
+                <a class="info-item-header" href="">Детский образовательный туризм</a>
+                <ul class="list">
+                  <li><a href="">Школьные туры</a></li>
+                  <li><a href="">Квесты</a></li>
+                  <li><a href="">Интерактивы</a></li>
+                </ul>
+              </div>
+              <div class="info-item">
+                <a class="info-item-header" href="">Весь мир для Вас</a>
+                <ul class="list">
+                  <li><a href="">Горящие туры</a></li>
+                  <li><a href="">Поиск тура</a></li>
+                  <li><a href="">Туры из Пскова</a></li>
+                  <li><a href="">Автобусные туры</a></li>
+                  <li><a href="">Круизы</a></li>
+                  <li><a href="">Визы, страховки, зеленые карты</a></li>
+                  <li><a href="">Бронь отелей, ж/д и авиабилеты</a></li>
+                </ul>
+              </div>
+            </div>
+            <nav class="nav">
+              <ul>
+                <li><a href="#">О нас</a></li>
+                <li><a href="#">Новости</a></li>
+                <li><a href="#">Отзывы</a></li>
+              </ul>
+            </nav>
+            <div class="footer-contacts">
+              <div class="contacts-info">
+                <h3>главный офис</h3>
+                <p>ул. Петровская, 31</p>
+                <a href="tel:+78112793097">+7 (8112) 79-30-97</a>
+                <div class="worktime">
+                  <p><span>Пн - Пт:</span> 10.00 - 19.00</p>
+                  <p><span>Сб:</span> 10.00 - 18.00</p>
+                  <p><span>Вс:</span> выходной</p>
+                </div>
+              </div>
+              <div class="contacts-info">
+                <div class="contacts-info__item">
+                  <h3>туры из Пскова</h3>
+                  <a href="tel:+78112793097">+7 (960) 225-52-25</a>
+                  <a href="mailto:mgp-pskov@yandex.ru">mgp-pskov@yandex.ru</a>
+                </div>
+                <div class="contacts-info__item">
+                  <h3>туры по Пскову</h3>
+                  <a href="tel:+79113573535">+7 (911) 357-35-35</a>
+                  <a href="mailto:priempskov@yandex.ru">priempskov@yandex.ru</a>
+                </div>
+              </div>
+              <div class="contacts-info">
+                <div class="contacts-office">
+                  <h3>офис</h3>
+                  <p>ТРК "Акваполис", 1 эт.</p>
+                  <a href="tel:+78112700700">+7 (8112) 700-700</a>
+                  <a href="tel:+79643163573">+7 (964) 316 3573</a>
+                  <a href="mailto:mgp-pskov@yandex.ru">mgp-pskov@yandex.ru</a>
+                  <div class="worktime">
+                    <p><span>Ежедневно: </span>10.00 - 21.00</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="footer-bottom">
+        <div class="wrapper">
+          <p>ООО «Славянский Тур» Россия, 180007, г. Псков, ул. Петровская, д. 31</p>
+          <a href="">Политика конфиденциальности</a>
+          <a href="https://www.coffeestudio.ru/"><img src="{% static "images/icon/CoffeeStudioLogo.png" %}" alt="">
+            <p>Сделано в агентстве интернет-рекламы <span>Coffee Studio</span></p>
+          </a>
+        </div>
+      </div>
+    </footer>
+
+  </div>
+
+  <div class="svgSprite" hidden="">
+    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="display:none">
+      <defs>
+        <path id="a" d="M1574 4847a12.01 12.01 0 0 1 19.31-9.52l-2.78 3.63a7.44 7.44 0 1 0 2.54 8.18H1586v-4.58h12v2.29c0 6.61-5.38 12-12 12s-12-5.39-12-12z"></path>
+        <path id="a" d="M1282.26 4510.4a3.42 3.42 0 1 1-5.7 2.52 3.42 3.42 0 0 1-5.7-2.53 3.4 3.4 0 0 1 3.42-3.38 3.4 3.4 0 0 1 3.42 3.4c.03.68.56 1.11 1.14 1.11.63 0 1.14-.5 1.14-1.13 0-3.1-2.56-5.63-5.7-5.63a5.67 5.67 0 0 0-5.7 5.63c0 1.93.99 3.7 2.64 4.75a5.96 5.96 0 0 0 5.75.28 1.14 1.14 0 0 1 1.5.55c.27.57.02 1.24-.55 1.5a8.22 8.22 0 0 1-7.93-.43 7.84 7.84 0 0 1-3.68-6.65 7.94 7.94 0 0 1 7.97-7.88c4.4 0 7.98 3.53 7.98 7.88zm-6.85-.14c-.06-.56-.55-1-1.13-1-.63 0-1.14.51-1.14 1.13 0 .62.51 1.13 1.14 1.13.57 0 1.04-.41 1.12-.95l.01-.3zm15.96 2.54v20.28a3.4 3.4 0 0 1-3.42 3.38h-27.34a3.4 3.4 0 0 1-3.42-3.38v-20.29c0-.27.11-.56.32-.78l.01-.01 4.23-4.18v-8.7c0-.62.5-1.12 1.14-1.12h22.78c.63 0 1.14.5 1.14 1.13v8.7l4.23 4.17c.21.21.33.5.33.8zm-4.56 1.78l1.8-1.78-1.8-1.79zm-22.78 2.26l6.17 6.1h8.17l6.16-6.1v-16.59h-20.5v16.59zm-4.09-4.04l1.8 1.78v-3.57zm8.17 11.26l-8.64-8.54v17.1zm19.37 10.14l-9.11-9h-8.17l-9.12 9zm1.61-18.68l-8.64 8.54 8.64 8.55z"></path>
+        <path id="a" d="M822.34 4511.35c0 2.44-.66 4.84-1.93 6.92l-10.57 17.47a1.14 1.14 0 0 1-1.95.01l-10.85-17.3a13.38 13.38 0 0 1-2.04-7.1c0-7.46 6.13-13.52 13.67-13.52s13.67 6.06 13.67 13.52zm-2.27 0c0-6.22-5.12-11.29-11.4-11.29s-11.4 5.07-11.4 11.29c0 2.1.6 4.14 1.7 5.92l9.87 15.72 9.62-15.87a11.16 11.16 0 0 0 1.61-5.77zm-4.56 0a6.79 6.79 0 0 1-6.84 6.76 6.79 6.79 0 0 1-6.83-6.76 6.8 6.8 0 0 1 6.83-6.76 6.8 6.8 0 0 1 6.84 6.76zm-2.27 0a4.56 4.56 0 1 0-9.14 0c0 2.49 2.05 4.52 4.57 4.52a4.54 4.54 0 0 0 4.57-4.52z"></path>
+        <path id="a" d="M381 4530.69l-1.76 1.74a12.41 12.41 0 0 1-17.42 0l-15.09-14.93a12.1 12.1 0 0 1 0-17.23l1.76-1.73a3.45 3.45 0 0 1 4.83 0l4.83 4.77a3.35 3.35 0 0 1 0 4.78l-2.2 2.17a2.54 2.54 0 0 0 0 3.62l9.53 9.42c1 1 2.65 1 3.66 0l2.2-2.17a3.45 3.45 0 0 1 4.83 0l4.83 4.78a3.36 3.36 0 0 1 0 4.78zm-31.7-29.76l6.44 6.36.8-.8c.45-.43.45-1.15 0-1.59l-4.83-4.76a1.15 1.15 0 0 0-1.61 0zm27.64 30.53l-6.42-6.35a4.9 4.9 0 0 1-6.65-.21l-9.52-9.43a4.77 4.77 0 0 1-.22-6.58l-6.42-6.35a9.82 9.82 0 0 0 .63 13.37l15.09 14.92a10.08 10.08 0 0 0 13.51.63zm2.45-3.96l-4.83-4.78a1.15 1.15 0 0 0-1.61 0l-.81.8 6.44 6.37.8-.8c.45-.43.45-1.15 0-1.59z"></path>
+        <path id="a" d="M1513.94 4849.43c0 .49-.21 1-.6 1.25-.42.3-1.03.26-1.52.26h-1.3V4848h1.42c.43 0 .97 0 1.35.23.39.22.65.76.65 1.2zm-2.6-3.44h-.83v-2.59h.62c.45 0 1.16-.05 1.54.18.37.22.57.63.57 1.06 0 .4-.17.83-.48 1.07-.4.32-.96.28-1.43.28zm12.66-6.77v15.56a4.22 4.22 0 0 1-4.22 4.22h-15.56a4.22 4.22 0 0 1-4.22-4.22v-15.56a4.22 4.22 0 0 1 4.22-4.22h15.56a4.22 4.22 0 0 1 4.22 4.22zm-7.19 10.32c0-1.86-1.01-2.63-2.43-2.92v-.04c.96-.28 1.7-1.2 1.7-2.55 0-1.74-1.42-2.73-2.98-2.73h-5.35v11.83h4.9c3 0 4.16-1.86 4.16-3.59z"></path>
+      </defs>
+      <symbol id="icon-google" viewBox="0 0 24 24">
+        <use fill="#fdf7ee" xlink:href="#a" transform="translate(-1574 -4835)"></use>
+      </symbol>
+      <symbol id="icon-internet" viewBox="0 0 59 53">
+        <image width="59" height="53" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADsAAAA1CAYAAAD/L5PDAAAFl0lEQVRoQ+2aTWxUVRSAv/Nm+iN/BUUgoGIUNSYiohtCxBChTbTSTqtg3Ihox0Zd6EJkAYsawQRxoUYlpQOIiTFanZmS4KKAQRcKGwGNMSqCpgEREShCUgvzjrnz1+nfzH3TlpmS3kWbzDvn3PPdc9+9591zhWTT7YHJXJbViC5HuQXwpZ6Nwv8xhKOotOLXTbIqes4wiPmjzbVzcWQXcOMoBMvlcgeuVktj2w+SiCjfX6WgqYHowM/doqHAayjreoZHuxDZhXIh15AV7XNhAqrVIOVpH4X1BvYXlNsSP2oXjrNAnokcLloQS8d0a908XHd/Glj4VbQlcDm9GAmfS0P0MUt7Iy6mirCt5j5cXx2qM3Dcd6Vh50HbjjUU+Azl0aR8zMBqhvIOCUafsjU2EnL66XIfnZcWAfVAoM9acoqKkpmyojVm07e2BD4AVqZkiwJW33mojPLyStA6hBpg6qAwfqaktpJcwEUDq1trJhLzVSNqolcNTMjlfPz5aIHVzXXT8Ouy5BRdCpTmADwL8V2hZ/8vZlhtfuQmxF+HSD3o/YCTA/BP0DZwwrjX78N3ahPKi2mdKwmrodplqPMyqhVZnRYmAjOAcRbT8zfQMI4ToWPeAWlqclM6Ggq8VRBY/bBqPP+N+xu4xgIgu4hyGEfCxNyISeUGEy4c7ObAzfg5lieogn4DEsHnROTp8FEbO8UE2wnEvyh6N/GDzsr47Rj+koWyqvWkDWCmTDHBvirBaFNfAA3Vz0bd3zN+PyTB6HyvoEZ+DDb5fZpr8IaUVGi/d1a247KtX6c+LUPZc7VFNtfgpp6fQ3gDpZ3j9xzM3FpyGSjcNA7VzEed73I5mOP5GWAvou3g2y0N4T+yyRcOtjlwKw5HhgjbV/0IQjuu7kFLv5TGVrPCp1vhYPvvsyYqmavuAqAs6WkHYDKjGSC3W6SJRs1kTgdQ3Y2wh+Od33LD5DcLk0H1h+219WhLwIDPTsJ+JcHo4vj20by8Aul+EEeWolQBcyxnxwXQCyAm7Uy0K5Ub91+NsYIdcB8mVomKAV8CXGsJP/pge72TTU0Osw7NR6jClUpEF2a8Cv3HoGCRNcm8cCjDI3N+Nb7vNLaOWnzKLxuHOItwpAqlEpjboy8/SjByl629YU4qsnabfmdtnRtITltqpqM+86E/HYl9JMGdf9naGxrsjrrr6NbTdp1JRIIRc2hWsDYk2PjKuiXwOsIr2WtBehJ8dRIM7y8YqfF1OE4X46eBE8sG/YC3Pf0b6YEYFtiRdnK47I/BZoxkr4qANi32M3PSw+DYb/rDFRbPdtwznDj/hTTtM+WcePMUWW0JfAKs8Nxv4RQ+lWD08XxhzefYlML57rnnsxKMpmeht8iGAu+hPO+5y0IpCO9LQ/SFvCIbn/fN9ffiuJMK5b91v65zXhrDvQ4WPEXWuqMiFRwI1pz7pkoZP1FRMte2/lmkjImVOFHnNZWGO5N+dpr6bBSo7XFcIrjuRlyxTrizQpe6U7ns67nbMJiwP9ZFt2OZd+cYZken4zhr4vXentYm2lK7COTrYo7S8PimDyTuQbXUrgdZOzxGi9GKbpBg27o4bAI48BywYZTtq7lG1hSz10owutkIpmHjwKYk2VW+BPHdAZo6cchlcODnIuWorslYC46DDnAMK3N6FcFENqLalV+nKS25iMZ+prxrrzzZfjH969CMDq6dvDlnRjbRhLelIfpSX42hnAt79b1XZL0qZ5Mfgx2LbP53JrzOxLFpnPVdNBcgY9pA4jZMtmbuOD2RIWAKVgNlSOY2W+bNm4+B7qyWlX/xScjrhVJPkdXmZ0twTp3Iet3O69zKX/407rSZ0rjlkq0Jb7Cezo1tXRiCXKlMlZWRf2wteII1RpOp5WqLq3i2PuQj1w26yaSAXpT/B7rBUDQbHxuxAAAAAElFTkSuQmCC"></image>
+      </symbol>
+      <symbol id="icon-mail" viewBox="0 0 35 39">
+        <use fill="#ff9b50" xlink:href="#a" transform="translate(-1257 -4498)"></use>
+      </symbol>
+      <symbol id="icon-map" viewBox="0 0 28 40">
+        <use fill="#ff9b50" xlink:href="#a" transform="translate(-795 -4497)"></use>
+      </symbol>
+      <symbol id="icon-phone" viewBox="0 0 39 39">
+        <use fill="#ff9b50" xlink:href="#a" transform="translate(-343 -4497)"></use>
+      </symbol>
+      <symbol id="icon-seo" viewBox="0 0 59 57">
+        <image width="59" height="57" xlink:href="data:image/png;base64,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"></image>
+      </symbol>
+      <symbol id="icon-server" viewBox="0 0 59 57">
+        <image width="59" height="57" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADsAAAA5CAYAAACI7VO4AAAFP0lEQVRoQ+Wbf4hUVRTHP+et62ZSaykWGpkV/dRCQRIiMhD76e7bJftFaebMbBlJrdA/9cdChEGt/SFpOzOaGlEpOW9WUoooiSAlyMDMklAMDIUstzJ/rHtP3DdvZ97+0HFmdX+988cM3HvPuef73rvnfu955wmB6Lq6sZyiEfQR4FrA6ewbgv8G2AeygZEslwWZIxaD2B9N10xDZQvIlUMQWBGX9RCiD0isdadoy9xxOBU/AlcMP6B5RIcxHVNEU+5bwNIQ0L+AjQjHhyx4ZRQwD7gshKHZgt0HTA4a26BjmsQ37x/MQDVZ9xCi9gbNQOlA2AHyhsQzX+ZjUGruZKjYCVQHbfstWLuY/bWL6EcSyz4+uIG6ryK81quPyhJJeCvygNO1H6LyWGcMtmA1pLhO4t7T3Q1p06wRXHX5RNpN7qL0lzjjD0pDsr1wt+pngvn2LNN3oB23S2Lzbj/wpty1wILO8UXBakv9dBzzGTCuvzCG5mnD6L3SkN2R2zVqk6jEC/3yNaJVKHcU2vRNiWdfLg9s2n0HZfEAAM1NKayVmLcwcP4rYFbgy59UV47n0L8jGFX1NzDSb1c8SXh1ZYKtW4CqfRwGShZL3FsVOP8JUB84oiAvAheDLss7p6yRhLeoLLC+UrJ2NiJT+h+t7pV4dkthzdYuBFlzVj9U6yWRzZQNtv9B9j6jHygnVm8DubPXEcJWFnkPiuAH3d4ClCURYwLlvRw8eqs0bTs9WAB290NX11yCcez2Mj+/ZUIHkOSfyqXSuNEnQ7kLM8ZG5RsCG0dtNA6vAxsQtgLNGHzyXLI4NlDIJNSUf5AQx4AewHDqjPM7jMXojbl+ZzdoW36s7bOsULk/pL9JNFk/AzHbh/gpp9g9MagzMzj11L6EyvJiGkO2X7RRYtm384xIkzU1iNMMXD9kQfV0/FfULJVEa6vt6kL/VBHSNVNR56bc/lWiCNOBF0JaXwAHSrAyCZgdGr8C5fsS9DuH/oeYn4m17uqMzD3AlmG0i4qmXRfF3+N8Eeok5nnnarev+sXm6UHsdf2c0ZwcfTWqVcWUe/Q7ek+3td8M+t2525EZXc7Woo0YsRSxNBE5SdWx32T+58fCioU1m66zDOl1VG24rizN+qAc3Y6I3UZfkVjGZmKCHJQfnORjkIsGpdt9ckpPoPqoDVKiLe51OOwCP5UxXOU4hqmiSXc1wjMhlHtA3kXVHptKF/Gp581ARenKeQ1L//agHD2jDVHBzqWiPnvy/wMRuRT02cCPXKM9DWnKPRTKLP6OqbxFGjYWqFcfPL4QqrphXgVtp21+2+aggoyoHASWEcuszB8CWuZV47T/BEwI/DjcNVOhvC8JzxLsQSuadNcjPHUGB1dI3FvS2dd9bNG0jP8ErHKvocLchuOUT+5LvXzGGER3hTOdQVZx81lNGblLGjLf+H6XnINa7c7B8CkwolR/z8N4g+rDocP4B8AThbWpKVRsYH2y0MZKiXnPlwc25a4EnjsPjpdpQt6TeMYPoJpytwF3B4aOSNwbp01NDhN/OBHiBlmJe255YKN0Z4fvmo1ANI7QPhspBhUlbuwHoHTtXJQNw/7Uk6dWUTnPhnf7SGQqyqQ3XdT6mkPqq34xDNHMLkYmb6zpiLwRiNS7nmi9xUu5kXo/W7Q0qFhI76/+8/HmvSjYAaupUH6RhGez+r5o6gLXVGg6QtUyGqk6qIGucMO5T+KbbBnEha9w8ydpSVRS8ceE4VC7GKmq1KFdbwz2Zm0/13rjCFWSR+kbgVyUi8jXH3l2EoHvev4HycOJ1qRGuXcAAAAASUVORK5CYII="></image>
+      </symbol>
+      <symbol id="icon-site" viewBox="0 0 68 65">
+        <image width="68" height="65" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEQAAABBCAYAAABo3gIBAAAFRElEQVR4Xu2bXWwUVRSAvzPblp9WC6ghmhiFSKwxiibGJiYYfRB/CN0pWPQN0MJKFELog1EfbKI2xkhNDP50tw3Kk1Kw2wQe1AdffFCMPmjERFSUGlSMpRp/+OnOMXe33U7/dmbb2e0OzE2aZnbOOXPON/fcuXPuHWGk6V57ERnagIdQlgOx0XMh/K8IP+FIH9VVL8nm3l/9xiBGULviN2HJYeBqv4ohkhvEkbgk+j7247Nke8YwX16gMEYZDOEMr5TEoRNeUERTzS+APj0mqGcQOYzyt5dyxZ4XnYfK/UC9y8ce2ZJu9fJZtNv+FmVFTlDP4HC7JPq/8lKs9PPave4a1PkcuCwXGn9x8pbF0t7uFPJdNGUP5wdQ4aC0ph+s9GD9+qcp+1Vge17esa6SxHu/eAFRl8DbsiW9ye8FK11OU3Y78Gzez2GWybb0jxGQUQIRkKiHjMuGKGUmDA4RkAhI4edc1EOiHhL1kKLmglHKRCkTpUyUMkURiFImShm0a+3liLUKuBKRGo8edB9wr0vmOWAweyxyGsc5xslbP3EXjUyBKBT1kFztVzpBNwLWbFJpgu4JlF2yNX0wyykMQLS7ZQl63lTNbwgQxHhTKm2yta8zHEBS9jvZ9aLSNgfLaax4IJpauwxiP4yx0DMo7Yh86ouPWLWgS5HMcRxrbHhQqQN2IXq3y05vCIDYjwLdLqd7EA75guElpFoFsgdYOiI6GAIg8T0gj3vFFtT5EACxPwDuCSpgLzthAPI6sM0rkKDOhwHI+LUVSCCcCgoAjuxwD6zhA+JjbaUYWJqy3wLMZC83gS00MdO9m+aTGWpBR9ZHi7lScLLjp99zCiRp9yHYwcUWgCWH6ySR/j4AS1kTxfWQlG1y9YqgLh6IHaFRWtNHArFVPJD48yDPBHXxQOzMZcpku9Qb9rXEWBRIMDMyIo8hmsirlheI7JMtffkRd0b+B6w0k8p5MS5MNYb8ASwZMXKc+uoG2dB7rhijpZSdCyD7gZZ8UCofAZ2IBrPHTGQ5qpd6QlP5h1jmu3FvpDkls4FnrNeWPGV6mm7DscyrdJBVKM/4ZyxQaiDZgTPZbOoCu2fsZDkVS/3YHY1Fk/Z6hFcqfr9qqSdm7pur+1tiDJ1rxLJWoLp4VjdeWIDS4bJhirlfTLIp2gDS4Pp9rDKe+7G8U/dZBV1AeWSH9GmXyJQ7HL2eIl7nZ+v/pMfubA1Opx8BmUAmAhIBKZxsF00P0WT8Diy2o7LAY/ypBh5wyfwH+udknez6iPkbbR8C/7qOzRPo+vxxOSZmfgdW7dpajXXq9wmfXfhVD0YupjfKI/1HgzE2RYGoGMP6WksdNeeH5vbzM30T5Ldi/C4oq9gIK0dlsp+YFdM02WzqE6ZodIkPPZM2803t1oesgp4DOTtBdiFg7JSl+XG0LI5MdxFN2u8jrC6XE5UPJGWb96udEZARApOm7o6swtGfAwNUzcso62c8hgTmiE9Dft9lNNW8DrQNpXaSaeFramSHbOwz1cFxrWzvMj7j9RTzA0T3ra7l7EIT7LxpDQqd0po2H2pfNEDMZrrpN+FdMECS8ScReTF/W6epmGkqbrZc7ZxyBm3pN1RbT0yZMt32AdcYkqn8p0yyqQmx+sf6uRygvuph2dCb8cw3D4HcJ/4cATFzJTNbOlb5QHKz4wFwLZYpRxE+mxUQoQ7VNXkYOSIdFQ/EuKkp22yYMRtnStkGqOLmUADJQknaHQhPlYjIAI6uMZ/4hwZIFkp3050Qa8PRuxC8F78K08sgmO2e7xJjt2xOm5dW/gfl9SkxBEH/lQAAAABJRU5ErkJggg=="></image>
+      </symbol>
+      <symbol id="icon-vk" viewBox="0 0 24 24">
+        <use fill="#fdf7ee" xlink:href="#a" transform="translate(-1500 -4835)"></use>
+      </symbol>
+      <symbol id="lead" viewBox="0 0 511.766 511.766">
+        <path d="M48.216 199.908h-.078c-2.209 0-3.959 1.789-3.959 3.999 0 2.209 1.831 3.998 4.037 3.998a3.997 3.997 0 0 0 3.999-3.998 3.997 3.997 0 0 0-3.999-3.999zM64.208 199.908h-.078c-2.21 0-3.959 1.789-3.959 3.999 0 2.209 1.831 3.998 4.037 3.998a3.996 3.996 0 0 0 3.998-3.998 3.995 3.995 0 0 0-3.998-3.999zM80.201 199.908h-.078c-2.209 0-3.959 1.789-3.959 3.999 0 2.209 1.832 3.998 4.038 3.998a3.998 3.998 0 1 0-.001-7.997z"></path>
+        <path d="M439.799 191.912H39.982c-6.614 0-11.994 5.381-11.994 11.995v7.997a3.996 3.996 0 0 0 3.998 3.998h415.809a3.996 3.996 0 0 0 3.998-3.998v-7.997c-.001-6.615-5.38-11.995-11.994-11.995zm3.998 15.993H35.984v-3.998a4.003 4.003 0 0 1 3.998-3.999h399.817c2.171 0 3.998 1.828 3.998 3.999v3.998z"></path>
+        <path d="M447.794 207.905a3.996 3.996 0 0 0-3.998 3.999v135.937a3.995 3.995 0 0 0 3.998 3.998 3.995 3.995 0 0 0 3.998-3.997V211.904a3.996 3.996 0 0 0-3.998-3.999zM31.986 207.905a3.996 3.996 0 0 0-3.998 3.999v255.882a3.995 3.995 0 0 0 3.998 3.998 3.996 3.996 0 0 0 3.998-3.997V211.904a3.997 3.997 0 0 0-3.998-3.999z"></path>
+        <path d="M335.846 463.787H31.986a3.996 3.996 0 0 0-3.998 3.999 3.995 3.995 0 0 0 3.998 3.998h303.86a3.996 3.996 0 0 0 3.999-3.998 3.997 3.997 0 0 0-3.999-3.999zM219.288 433.684l-39.981-63.971c-1.46-2.343-5.318-2.343-6.778 0l-39.981 63.971a3.995 3.995 0 0 0 1.269 5.505 3.98 3.98 0 0 0 5.51-1.272l36.592-58.544 36.592 58.544a3.988 3.988 0 0 0 5.508 1.272 3.994 3.994 0 0 0 1.269-5.505z"></path>
+        <path d="M146.768 421.409l-19.437-27.877a3.989 3.989 0 0 0-3.271-1.711h-.008c-1.3 0-2.522.633-3.272 1.703l-28.096 39.981a3.998 3.998 0 1 0 6.544 4.592l24.813-35.304 16.168 23.192c1.257 1.812 3.748 2.249 5.568.992a4.002 4.002 0 0 0 .991-5.568zM415.81 239.89H63.971a3.996 3.996 0 0 0-3.998 3.999v63.971a3.995 3.995 0 0 0 3.998 3.998H415.81a3.995 3.995 0 0 0 3.998-3.998v-63.971a3.997 3.997 0 0 0-3.998-3.999zm-3.998 63.972H67.969v-55.975h343.843v55.975z"></path>
+        <path d="M223.898 327.85H63.971a3.996 3.996 0 0 0-3.998 3.998v103.953a3.995 3.995 0 0 0 3.998 3.998h159.927a3.995 3.995 0 0 0 3.998-3.998V331.848a3.996 3.996 0 0 0-3.998-3.998zM219.9 431.803H67.969v-95.957H219.9v95.957z"></path>
+        <path d="M91.958 343.843c-8.82 0-15.993 7.177-15.993 15.992 0 8.816 7.173 15.993 15.993 15.993 8.821 0 15.992-7.176 15.992-15.993 0-8.815-7.172-15.992-15.992-15.992zm0 23.989c-4.409 0-7.997-3.585-7.997-7.997s3.589-7.996 7.997-7.996 7.996 3.584 7.996 7.996c-.001 4.412-3.587 7.997-7.996 7.997zM415.81 343.843H255.883a3.995 3.995 0 0 0-3.998 3.998 3.995 3.995 0 0 0 3.998 3.998H415.81a3.995 3.995 0 0 0 3.998-3.998 3.996 3.996 0 0 0-3.998-3.998zM351.839 367.832h-95.956a3.995 3.995 0 0 0-3.998 3.998 3.995 3.995 0 0 0 3.998 3.998h95.956a3.995 3.995 0 0 0 3.998-3.998 3.996 3.996 0 0 0-3.998-3.998zM335.846 391.821h-79.963a3.996 3.996 0 0 0-3.998 3.998 3.995 3.995 0 0 0 3.998 3.998h79.963a3.996 3.996 0 0 0 3.999-3.998 3.996 3.996 0 0 0-3.999-3.998zM327.85 415.81h-71.967a3.995 3.995 0 0 0-3.998 3.998 3.995 3.995 0 0 0 3.998 3.998h71.967a3.995 3.995 0 0 0 3.998-3.998 3.995 3.995 0 0 0-3.998-3.998zM375.828 263.879H103.952a3.996 3.996 0 0 0-3.998 3.998 3.995 3.995 0 0 0 3.998 3.998h271.876a3.995 3.995 0 0 0 3.998-3.998 3.996 3.996 0 0 0-3.998-3.998zM327.85 279.872H151.931a3.995 3.995 0 0 0-3.998 3.998 3.995 3.995 0 0 0 3.998 3.998H327.85a3.995 3.995 0 0 0 3.998-3.998 3.995 3.995 0 0 0-3.998-3.998zM119.938 59.974c-15.95 0-27.979 12.877-27.979 29.947 0 17.203 16.019 34.023 27.979 34.023 11.963 0 27.995-16.821 27.995-34.023-.001-17.07-12.035-29.947-27.995-29.947zm0 55.973c-6.411 0-19.983-12.315-19.983-26.027 0-12.721 8.402-21.951 19.983-21.951 11.588 0 19.998 9.23 19.999 21.951 0 13.978-13.412 26.027-19.999 26.027z"></path>
+        <path d="M155.643 125.841c-6.431-2.523-14.13-6.068-16.098-7.622a4.002 4.002 0 0 0-3.608-2.272 3.996 3.996 0 0 0-3.998 3.999c0 2.303 0 5.177 20.776 13.345.48.188.976.273 1.464.273a4 4 0 0 0 1.464-7.723z"></path>
+        <path d="M135.938 106.124a3.996 3.996 0 0 0-3.998 3.998v9.824c0 2.21 1.788 3.998 3.998 3.998s3.998-1.789 3.999-3.998v-9.824a3.997 3.997 0 0 0-3.999-3.998zM103.952 115.947a4.003 4.003 0 0 0-3.607 2.272c-1.968 1.555-9.667 5.1-16.098 7.622a4.002 4.002 0 0 0 2.928 7.45c20.775-8.168 20.775-11.041 20.775-13.345a3.997 3.997 0 0 0-3.998-3.999z"></path>
+        <path d="M103.952 106.124a3.996 3.996 0 0 0-3.998 3.998v9.824a3.995 3.995 0 0 0 3.998 3.998 3.996 3.996 0 0 0 3.998-3.998v-9.824a3.997 3.997 0 0 0-3.998-3.998z"></path>
+        <path d="M119.945 43.979c-28.66 0-51.977 23.318-51.977 51.977s23.318 51.977 51.977 51.977 51.976-23.318 51.976-51.977-23.318-51.977-51.976-51.977zm0 95.957c-24.251 0-43.98-19.733-43.98-43.98s19.729-43.98 43.98-43.98c24.251 0 43.979 19.733 43.979 43.98s-19.729 43.98-43.979 43.98zM359.827 59.974c-15.953 0-27.979 12.877-27.979 29.947 0 17.203 16.024 34.023 27.979 34.023 11.964 0 27.995-16.821 27.995-34.023 0-17.07-12.033-29.947-27.995-29.947zm0 55.973c-6.411 0-19.982-12.315-19.982-26.027 0-12.721 8.402-21.951 19.982-21.951 11.589 0 19.999 9.23 19.999 21.951 0 13.978-13.416 26.027-19.999 26.027z"></path>
+        <path d="M395.53 125.841c-6.426-2.523-14.126-6.068-16.094-7.622a4 4 0 0 0-3.607-2.272 3.996 3.996 0 0 0-3.998 3.999c0 2.303 0 5.177 20.779 13.345a4.012 4.012 0 0 0 5.186-2.265 4.01 4.01 0 0 0-2.266-5.185z"></path>
+        <path d="M375.828 106.124a3.996 3.996 0 0 0-3.998 3.998v9.824a3.995 3.995 0 0 0 3.998 3.998 3.996 3.996 0 0 0 3.998-3.998v-9.824a3.996 3.996 0 0 0-3.998-3.998zM343.843 115.947c-1.592 0-2.96.929-3.608 2.272-1.967 1.555-9.667 5.1-16.094 7.622a4.009 4.009 0 0 0-2.265 5.185 4.009 4.009 0 0 0 5.186 2.265c20.779-8.168 20.779-11.041 20.779-13.345a3.997 3.997 0 0 0-3.998-3.999z"></path>
+        <path d="M343.843 106.124a3.996 3.996 0 0 0-3.998 3.998v9.824c0 2.21 1.788 3.998 3.998 3.998s3.998-1.789 3.998-3.998v-9.824a3.997 3.997 0 0 0-3.998-3.998z"></path>
+        <path d="M359.835 43.979c-28.659 0-51.976 23.318-51.976 51.977s23.318 51.977 51.976 51.977c28.659 0 51.977-23.318 51.977-51.977s-23.318-51.977-51.977-51.977zm0 95.957c-24.246 0-43.979-19.733-43.979-43.98s19.733-43.98 43.979-43.98c24.247 0 43.98 19.733 43.98 43.98s-19.733 43.98-43.98 43.98zM239.883 15.994c-15.95 0-27.979 12.877-27.979 29.947 0 17.202 16.02 34.023 27.979 34.023 11.963 0 27.994-16.821 27.995-34.023 0-17.07-12.034-29.947-27.995-29.947zm0 55.973c-6.411 0-19.983-12.315-19.983-26.027 0-12.721 8.402-21.951 19.983-21.951 11.588 0 19.998 9.23 19.999 21.951 0 13.978-13.412 26.027-19.999 26.027z"></path>
+        <path d="M275.585 81.861c-6.427-2.522-14.126-6.068-16.095-7.622a4.001 4.001 0 0 0-3.607-2.272 3.996 3.996 0 0 0-3.998 3.998c0 2.304 0 5.178 20.779 13.346a4.012 4.012 0 0 0 5.186-2.265 4.01 4.01 0 0 0-2.265-5.185z"></path>
+        <path d="M255.883 62.144a3.995 3.995 0 0 0-3.998 3.998v9.823c0 2.21 1.788 3.999 3.998 3.999s3.998-1.789 3.998-3.999v-9.823a3.996 3.996 0 0 0-3.998-3.998zM223.898 71.967a4.001 4.001 0 0 0-3.607 2.272c-1.968 1.555-9.668 5.1-16.099 7.622a4.002 4.002 0 0 0 2.929 7.45c20.775-8.168 20.775-11.042 20.775-13.346a3.996 3.996 0 0 0-3.998-3.998z"></path>
+        <path d="M223.898 62.144a3.995 3.995 0 0 0-3.998 3.998v9.823c0 2.21 1.788 3.999 3.998 3.999s3.998-1.789 3.998-3.999v-9.823a3.995 3.995 0 0 0-3.998-3.998z"></path>
+        <path d="M239.89 0c-28.659 0-51.976 23.317-51.976 51.976s23.317 51.976 51.976 51.976 51.976-23.317 51.976-51.976S268.549 0 239.89 0zm0 95.956c-24.251 0-43.98-19.733-43.98-43.98 0-24.247 19.73-43.98 43.98-43.98 24.247 0 43.98 19.733 43.98 43.98 0 24.247-19.733 43.98-43.98 43.98zM314.98 137.437c-1.374-1.719-3.881-1.992-5.622-.625l-39.981 31.97a4.004 4.004 0 0 0-.625 5.622 3.995 3.995 0 0 0 3.123 1.5c.875 0 1.758-.289 2.499-.874l39.981-31.97a4.004 4.004 0 0 0 .625-5.623z"></path>
+        <path d="M271.875 159.927a3.996 3.996 0 0 0-3.998 3.998v7.981a3.997 3.997 0 0 0 3.998 3.998 3.996 3.996 0 0 0 3.999-3.998v-7.981a3.996 3.996 0 0 0-3.999-3.998z"></path>
+        <path d="M279.872 167.923h-7.997a3.997 3.997 0 0 0-3.998 3.999 3.997 3.997 0 0 0 3.998 3.998h7.997a3.996 3.996 0 0 0 3.998-3.998 3.996 3.996 0 0 0-3.998-3.999zM210.398 168.781l-39.981-31.97a4.015 4.015 0 0 0-5.618.625 4.001 4.001 0 0 0 .628 5.623l39.982 31.97a3.993 3.993 0 0 0 5.618-.626 4 4 0 0 0-.629-5.622z"></path>
+        <path d="M207.905 159.927a3.995 3.995 0 0 0-3.998 3.998v7.981a3.996 3.996 0 0 0 3.998 3.998 3.997 3.997 0 0 0 3.999-3.998v-7.981a3.996 3.996 0 0 0-3.999-3.998z"></path>
+        <path d="M207.905 167.923h-7.997a3.996 3.996 0 0 0-3.998 3.999 3.996 3.996 0 0 0 3.998 3.998h7.997a3.997 3.997 0 0 0 3.999-3.998 3.997 3.997 0 0 0-3.999-3.999zM239.89 111.949a3.996 3.996 0 0 0-3.998 3.998v47.97a3.995 3.995 0 0 0 3.998 3.998 3.996 3.996 0 0 0 3.999-3.998v-47.97a3.998 3.998 0 0 0-3.999-3.998z"></path>
+        <path d="M248.378 155.428a3.997 3.997 0 0 0-5.654 0l-5.661 5.662a3.997 3.997 0 0 0 2.827 6.825 3.98 3.98 0 0 0 2.826-1.171l5.662-5.662a3.997 3.997 0 0 0 0-5.654z"></path>
+        <path d="M242.716 161.09l-5.661-5.662c-1.562-1.562-4.092-1.562-5.654 0s-1.562 4.092 0 5.654l5.662 5.662c.781.781 1.804 1.171 2.827 1.171s2.046-.39 2.826-1.171a3.997 3.997 0 0 0 0-5.654zM415.81 359.835c-37.475 0-67.969 30.494-67.969 67.97 0 37.475 30.494 67.969 67.969 67.969 37.475 0 67.969-30.495 67.969-67.969 0-37.476-30.493-67.97-67.969-67.97zm0 127.942c-33.072 0-59.973-26.902-59.973-59.972 0-33.072 26.902-59.973 59.973-59.973s59.972 26.902 59.973 59.973c0 33.071-26.901 59.972-59.973 59.972z"></path>
+        <path d="M479.78 439.799a3.995 3.995 0 0 0-3.998 3.998c0 33.071-26.901 59.973-59.973 59.973s-59.973-26.903-59.973-59.973a3.995 3.995 0 0 0-3.998-3.998 3.995 3.995 0 0 0-3.998 3.998c0 37.475 30.494 67.969 67.969 67.969 37.475 0 67.969-30.494 67.969-67.969a3.995 3.995 0 0 0-3.998-3.998z"></path>
+        <path d="M351.839 423.806a3.996 3.996 0 0 0-3.998 3.999v15.992a3.995 3.995 0 0 0 3.998 3.998 3.995 3.995 0 0 0 3.998-3.998v-15.992a3.996 3.996 0 0 0-3.998-3.999zM479.78 423.806a3.996 3.996 0 0 0-3.998 3.999v15.992a3.995 3.995 0 0 0 3.998 3.998 3.995 3.995 0 0 0 3.998-3.998v-15.992a3.996 3.996 0 0 0-3.998-3.999zM415.81 399.816a3.996 3.996 0 0 0-3.998 3.999v47.978a3.995 3.995 0 0 0 3.998 3.998 3.995 3.995 0 0 0 3.998-3.998v-47.978a3.997 3.997 0 0 0-3.998-3.999zM415.81 487.777a3.996 3.996 0 0 0-3.998 3.999v15.992a3.995 3.995 0 0 0 3.998 3.998 3.995 3.995 0 0 0 3.998-3.998v-15.992a3.996 3.996 0 0 0-3.998-3.999zM447.794 479.218a3.996 3.996 0 0 0-3.998 3.999v15.992a3.995 3.995 0 0 0 3.998 3.998 3.995 3.995 0 0 0 3.998-3.998v-15.992a3.995 3.995 0 0 0-3.998-3.999zM383.824 479.218a3.996 3.996 0 0 0-3.998 3.999v15.992a3.995 3.995 0 0 0 3.998 3.998 3.995 3.995 0 0 0 3.998-3.998v-15.992a3.996 3.996 0 0 0-3.998-3.999z"></path>
+      </symbol>
+      <symbol id="search-engine" viewBox="0 0 512 512">
+        <path d="M478.33 179.574H33.67c-18.566 0-33.67 15.105-33.67 33.67v85.511c0 18.566 15.105 33.67 33.67 33.67h444.66c18.566 0 33.67-15.105 33.67-33.67v-85.511c0-18.565-15.105-33.67-33.67-33.67zM359.148 316.392H33.67c-9.725 0-17.637-7.912-17.637-17.637v-85.511c0-9.725 7.912-17.637 17.637-17.637h325.478v120.785zm136.819-17.636c0 9.725-7.912 17.637-17.637 17.637H375.182V195.608H478.33c9.725 0 17.637 7.912 17.637 17.637v85.511z"></path>
+        <path d="M475.447 284.536l-19.638-19.638a33.468 33.468 0 0 0 4.884-17.45c0-18.566-15.105-33.67-33.67-33.67-18.566 0-33.67 15.105-33.67 33.67s15.105 33.67 33.67 33.67a33.474 33.474 0 0 0 17.45-4.884l19.638 19.638c1.565 1.565 3.617 2.348 5.668 2.348s4.103-.782 5.668-2.348a8.015 8.015 0 0 0 0-11.336zm-48.424-19.45c-9.725 0-17.637-7.912-17.637-17.637 0-9.725 7.912-17.637 17.637-17.637 9.725 0 17.637 7.912 17.637 17.637 0 9.725-7.912 17.637-17.637 17.637zM42.221 213.779a8.017 8.017 0 0 0-8.017 8.017v68.409a8.017 8.017 0 0 0 16.034 0v-68.409a8.017 8.017 0 0 0-8.017-8.017z"></path>
+      </symbol>
+    </svg>
+  </div>
+
+  <script src="{% static "js/combined.min.js" %}"></script>
+
+  <div class="counters">
+    <!-- counters -->
+  </div>
+</body>
+</html>

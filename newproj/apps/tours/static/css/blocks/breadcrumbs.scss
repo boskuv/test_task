@@ -1,0 +1,44 @@
+.breadcrumbs{
+    .wrapper {
+        max-width: 1860px;
+        ul {
+            display: flex;
+            li {
+                position: relative;
+                padding-right: 40px;
+                &:last-child {
+                    &::before {
+                        display: none;
+                    }
+                }
+                a {
+                    color: #bbbbbb;
+                    font-size: 20px;
+                    @media screen {
+                        @media (max-width: 1460px) {
+                            font-size: 18px;
+                        }
+                    }
+                    &:hover {
+                        color: #c5c5c5;
+                    }
+                }
+                &::before {
+                    content: '';
+                    position: absolute;
+                    right: 15px;
+                    top: 9px;
+                    width: 5px;
+                    height: 5px;
+                    border-radius: 50%;
+                    background-color: #1A95B6;
+                    @media screen {
+                        @media (max-width: 1460px) {
+                            top: 8px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

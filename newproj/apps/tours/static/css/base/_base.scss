@@ -1,0 +1,158 @@
+body {
+
+  background: {
+    color: $body-bg-color;
+  };
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+
+  & > .content {
+    flex: 1 0 auto;
+    position: relative;
+
+  }
+}
+
+.wrapper {
+  margin: 0 auto;
+  padding: $wrapper-padding;
+  min-width: $wrapper-min-width;
+  max-width: $wrapper-max-width;
+}
+
+h1, h2, h3, h4, p, a, span, ul, ol, li {
+  font-family: $mainFonts;
+} 
+
+a{
+  color: $link-color;
+  &:hover, &:focus{
+    color: $link-color--hover;
+  }
+}
+
+.header-block {
+  display: flex;
+  align-items: center;
+
+  @media screen {
+    @media (max-width: 700px){
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+
+  h1, h2, h3, h4{
+    color: $base-color;
+    font-size: 41px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.23px;
+    @media screen {
+      @media (max-width: 1200px) {
+        font-size: 35px;
+        line-height: 37px;
+      }
+      @media (max-width: 960px) {
+        font-size: 28px;
+        line-height: 30px;
+      }
+      @media (max-width: 640px) {
+        font-size: 20px;
+        line-height: 22px;
+        font-weight: 500;
+      }
+      @media (max-width: 370px) {
+        font-size: 16px;
+      }
+    }  
+  }   
+  a{
+    // transition: .3s ease-in;
+    position: relative;
+    color: #027998;
+    font-size: 16px;
+    font-weight: 300;
+    letter-spacing: 0.48px;
+    margin-left: 69px;
+    padding-right: 12px;
+    padding-bottom: 5px;
+    text-decoration: none;
+
+    @media screen {
+      @media (max-width: 800px){
+        font-size: 12px;
+        margin-left: 20px;
+      }
+      @media (max-width: 700px){
+        margin-left: 0;
+        margin-top: 10px;
+      }
+    }
+
+    &:hover, &:focus{
+      text-decoration: none;
+      color: #10607A;
+
+      &::after{
+        background-color: #10607A;
+      }
+      &::before{
+        background-image: url(../images/arrow-point-hover.png);
+      }
+    }
+
+    &::before{
+      position: absolute;
+      content: '';
+      right: 0;
+      width: 5px;
+      height: 90%;
+      background-image: url(../images/arrow-point-hover.png);
+      background-image: url(../images/arrow-point.png);
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+    &::after{
+      position: absolute;
+      content: '';
+      left: 0;
+      bottom: 0;
+      width: calc(100% - 12px);
+      height: 1px;
+      background-color: #027998;
+    }
+  }
+}
+
+.btn-white {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  width: 235px;
+  height: 50px;
+  box-shadow: 0 0 43px rgba(0, 0, 0, 0.07);
+  background-color: #ffffff;
+  border-radius: 30px;
+  cursor: pointer;
+  &:hover {
+    box-shadow: 0 0 43px rgba(0, 0, 0, 0.14);
+  }
+  span {
+      color: #027998;
+      font-size: 18px;
+      font-weight: 300;
+      line-height: 22px;
+      letter-spacing: 0.42px;
+      margin-right: 10px;
+  }
+  img {
+      width: 14px;
+      height: 7px;
+  }
+}

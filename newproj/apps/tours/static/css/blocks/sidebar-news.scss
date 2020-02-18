@@ -1,0 +1,35 @@
+.sidebar-news {
+    margin-top: 65px;
+    margin-left: 50px;
+    min-width: 280px;
+    max-width: 300px;
+    h2 {
+        color: #347485;
+        font-size: 24px;
+    }
+    .activity-item {
+        width: 100%;
+        margin-top: 20px;
+        a {
+            &::before {
+                display: none;
+            }
+            span {
+                padding-top: 10px;
+                font-size: 18px;
+            }
+            h3 {
+                font-size: 20px;
+            }
+            .activity-description {
+                padding-bottom: 20px;
+                font-size: 18px;
+                @media screen {
+                    @media (max-width: 1050px){
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
+}

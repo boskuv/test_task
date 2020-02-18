@@ -1,0 +1,75 @@
+{% extends 'base.html' %}
+
+{% block title %} {{meta_categ.name}} {% endblock %}
+
+{% block content %}
+{% load static %}
+
+<div class="page-content horizontal-elements">
+            <div class="wrapper">              
+<section class="sidebar">
+            <div class="category">
+                <div class="category-btn" style="background-image: url(/static/images/submenu-item-1.png);">
+                    <h3>Открой свой Псков</h3>
+                </div>
+                    <ul class="category-content">
+					{% for category in list_of_categories %}
+								{% if category.name == meta_categ.name %}
+                                <li class="category-content__item">
+                                    <a href="/tours/{{category.slug}}/"><span class=" active">{{category.name}}</span></a>
+                                </li>
+								{% else %}
+                                <li class="category-content__item">
+                                    <a href="/tours/{{category.slug}}/"><span class="">{{category.name}}</span></a>
+                                </li>
+								{% endif %}
+                                {% endfor %}
+                    </ul>
+            </div>
+</section>
+                <div class="page-content-items">
+                        <div style="width: 100%; margin-left: 10px; margin-bottom: 5px;"><p>Если у вас уже есть своя компания, то вы можете выбрать любой групповой тур по Пскову и Псковской области (Изборск, Печоры, Пушкинские Горы, Талабские острова, Порхов, Остров, Себеж, дворянские усадьбы) и мы организуем его по вашему запросу в любое время.</p>
+
+<p>&nbsp;</p></div>
+                    
+                    
+                        {% for tour in list_of_tours %}
+                            <a class="page-content__item" href="{{tour.pk}}/">
+                                <div class="content-item__img">
+                                    
+                                        {% if tour.cover %}
+                                        <img src="{{ MEDIA_URL }}{{ tour.cover.url }}" alt="{{tour.title}}">
+                                        {% endif %}
+                                </div>
+                                <div class="content-item__title">
+                                    <span>{{tour.title}}</span>
+                                    
+                                        <ul class="towns">
+                                            <li>{{tour.subtitle}}</li>
+                                        </ul>
+                                    
+
+                                        
+
+                                        <span class="tour-days">
+                                            
+                                                {{tour.duration}}
+                                            
+                                        </span>
+
+
+                                        <span class="tour-days">
+                                        
+                                        </span>
+                                    <object type="owo/uwu">
+                                        <button type="button" data-mfp-src="#order-catalog" class="btn-white btn-order popup-with-form" onclick="setTour('Открой свой Псков', 'null', 'null', '')">Заказать</button>
+                                    </object>
+                                </div>
+                            </a>
+                        {% endfor %}
+
+                </div>
+            </div>
+        </div>
+
+{% endblock %}

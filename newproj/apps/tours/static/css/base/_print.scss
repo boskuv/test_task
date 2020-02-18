@@ -1,0 +1,10 @@
+@media print {
+
+  @page {
+    margin: $print-page-margin;
+  }
+
+  body {
+    background-color: #fff;
+  }
+}

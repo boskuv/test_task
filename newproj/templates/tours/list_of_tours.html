@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+
+{% block title %} Тур {% endblock %}
+
+{% block content %}
+{% load static %}
+<section class="page">
+        <div class="page-content inner-category">
+          <div class="wrapper">
+            <aside class="sidebar">
+              <div class="category">
+                <div class="category-btn">
+                  <h3>Открой свой Псков</h3>
+                </div>
+                <ul class="category-content">
+				{% for category in list_of_categories %}
+                  <li class="category-content__item">
+                    <a href="/tours/{{category.slug}}/">{{category.name}}</a>
+                  </li>
+				  {% endfor %}
+                </ul>
+              </div> 
+            </aside>
+			
+			
+            <div class="page-content-items">
+              <div class="content-container">
+                <a class="page-content__item" href="/tours/{{list_of_categories.0.slug}}/">
+                  <div class="content-item__img">
+                    <img src="{% static "images/page-item-4.jpg" %}" alt="">
+                  </div>
+                  <div class="content-item__title">
+                    <span>{{list_of_categories.0.name}}</span>
+                  </div>
+                </a>
+
+                <a class="page-content__item" href="/tours/{{list_of_categories.1.slug}}/">
+                  <div class="content-item__img">
+                    <img src="{% static "images/page-item-4.1.jpg" %}" alt="">
+                  </div>
+                  <div class="content-item__title">
+                    <span>{{list_of_categories.1.name}}</span>
+                  </div>
+                </a>
+                <a class="page-content__item" href="/tours/{{list_of_categories.2.slug}}/">
+                  <div class="content-item__img">
+                    <img src="{% static "images/page-item-4.2.jpg" %}" alt="">
+                  </div>
+                  <div class="content-item__title">
+                    <span>{{list_of_categories.2.name}}</span>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+{% endblock %}

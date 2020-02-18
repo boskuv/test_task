@@ -1,0 +1,67 @@
+/*------------------------------------*\
+  # Path
+\*------------------------------------*/
+$img-path: '../images';
+$svg-path: '../images/vector';
+
+/*------------------------------------*\
+    # Colors
+    # http://chir.ag/projects/name-that-color
+\*------------------------------------*/
+$base-color:#347485;
+$body-bg-color: #f9f9f9;
+
+$link-color: #347485;
+$link-color--hover: darken($link-color, 10%);
+$link-color--active: darken($link-color, 10%);
+
+$button-color:#96b6bf;
+
+$gray: #b7b7b7;
+$red: #ff0000;
+$crail: #b94040;
+$baltic-sea: #29262a;
+$thunder: #181618;
+
+/*------------------------------------*\
+    # Basic typography
+\*------------------------------------*/
+$font-size--root: 16px;
+
+$font-size: 1rem;
+
+$font-size--h1: rem(40px);
+$font-size--h2: rem(32px);
+$font-size--h3: rem(24px);
+$font-size--h4: rem(18px);
+$font-size--h5: rem(16px);
+$font-size--h6: rem(16px);
+
+$font-size--small: 80%;
+
+$font-weight: 400;
+$font-weight--lite: 300;
+$font-weight--bold: 700;
+$font-weight--black: 900;
+
+$line-height: normal;
+
+$mainFonts: 'Helvetica Neue Cyr', sans-serif;
+
+/*------------------------------------*\
+    # Wrapper
+\*------------------------------------*/
+$wrapper-min-width: 280px;
+$wrapper-max-width: 1210px;
+$wrapper-padding: 0 20px;
+
+/*------------------------------------*\
+  # Print
+\*------------------------------------*/
+$print-page-margin: 1cm;
+
+/*------------------------------------*\
+  # Magnific-Popup settings
+\*------------------------------------*/
+$mfp-overlay-color: #000;
+$mfp-overlay-opacity: .5;
